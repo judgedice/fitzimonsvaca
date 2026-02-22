@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10-Day Ireland Itinerary | Dublin Start</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --clover: #2d5a27;
+      --cream: #f8f5f0;
+      --peat: #3d2c29;
+      --gold: #c9a227;
+      --stone: #6b7b6c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--peat);
+      line-height: 1.6;
+    }
+    .hero {
+      background: linear-gradient(135deg, var(--clover) 0%, #1a3d16 100%);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .hero p { opacity: 0.9; font-size: 1.1rem; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+    .day-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(45, 90, 39, 0.08);
+      margin-bottom: 2.5rem;
+      border: 1px solid rgba(45, 90, 39, 0.12);
+    }
+    .day-header {
+      background: linear-gradient(90deg, var(--clover), var(--stone));
+      color: white;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .day-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .day-header .badge {
+      background: rgba(255,255,255,0.25);
+      padding: 0.25rem 0.6rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+    .day-content { padding: 1.5rem; }
+    .day-intro {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px dashed rgba(45, 90, 39, 0.2);
+      font-size: 0.95rem;
+    }
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .option-card {
+      background: var(--cream);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(45, 90, 39, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .option-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(45, 90, 39, 0.12);
+    }
+    .option-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+    .option-card .info { padding: 1rem; }
+    .option-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: var(--clover);
+    }
+    .option-card .price {
+      font-weight: 600;
+      color: var(--gold);
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+    .option-card p {
+      font-size: 0.875rem;
+      color: var(--stone);
+      margin-bottom: 0.75rem;
+    }
+    .option-card a {
+      display: inline-block;
+      background: var(--clover);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .option-card a:hover { background: #1a3d16; }
+    .section-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--stone);
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+    .transport-note {
+      background: #e8f0e6;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      border-left: 4px solid var(--clover);
+    }
+    .transport-badge {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 0.25rem;
+    }
+    .transport-badge.no-car { background: #e8f0e6; color: var(--clover); }
+    .transport-badge.car-needed { background: #f5e6d3; color: #8b6914; }
+    .spreadsheet-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--peat);
+      color: white;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 2rem 0;
+      transition: background 0.2s;
+    }
+    .spreadsheet-link:hover { background: #2a1f1d; }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: var(--stone);
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>10-Day Ireland Itinerary</h1>
+    <p>Starting in Dublin · Budget-friendly · Hotels & B&Bs only</p>
+  </header>
+
+  <div class="container">
+    <a href="ireland-research.csv" class="spreadsheet-link" download>📊 Download Full Research Spreadsheet</a>
+
+    <!-- Day 1 -->
+    <article class="day-card">
+      <div class="day-header">
+        <h2>Day 1 — Dublin Arrival</h2>
+        <span class="badge">2 nights</span>
+      </div>
+      <div class="day-content">
+        <div class="day-intro">Arrive in Dublin. Settle in and explore the city center. Best 3 accommodation options:</div>
+        <div class="section-label">Accommodation (Dublin)</div>
+        <div class="options-grid">
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a94dc962804?w=600&q=80" alt="Hotel room">
+            <div class="info">
+              <h3>The Grafton Hotel</h3>
+              <div class="price">From ~€115/night</div>
+              <p>#1 best value. Central, modern rooms near Grafton Street.</p>
+              <a href="https://www.booking.com/city/ie/dublin.html" target="_blank" rel="noopener">Compare & Book →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80" alt="Hotel">
+            <div class="info">
+              <h3>Travelodge Plus Dublin City Centre</h3>
+              <div class="price">From ~€140/night</div>
+              <p>Clean, cozy rooms. Excellent staff. Prime city-center location.</p>
+              <a href="https://www.booking.com/city/ie/dublin.html" target="_blank" rel="noopener">Compare & Book →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80" alt="B&B">
+            <div class="info">
+              <h3>Kilronan House B&B</h3>
+              <div class="price">From ~€120/night</div>
+              <p>#1 B&B in Ireland. Boutique style, breakfast included.</p>
+              <a href="https://www.bedandbreakfasts.ie/" target="_blank" rel="noopener">Browse B&Bs →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Day 2 -->
+    <article class="day-card">
+      <div class="day-header">
+        <h2>Day 2 — Dublin Sightseeing</h2>
+        <span class="badge">Dublin</span>
+      </div>
+      <div class="day-content">
+        <div class="day-intro">Explore Dublin's top attractions. Best 3 activity options (keep costs low):</div>
+        <div class="section-label">Activities</div>
+        <div class="options-grid">
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1548089945-aba2f3c3e1f8?w=600&q=80" alt="Trinity College">
+            <div class="info">
+              <h3>Book of Kells + Trinity College</h3>
+              <div class="price">From €21.50</div>
+              <p>Medieval manuscript & Old Library. Book ahead at visittrinity.ie</p>
+              <a href="https://visittrinity.ie/book-of-kells-experience" target="_blank" rel="noopener">Book Tickets →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Guinness">
+            <div class="info">
+              <h3>Guinness Storehouse</h3>
+              <div class="price">€26–36</div>
+              <p>7 floors, tasting, Gravity Bar pint. Dynamic pricing—book early.</p>
+              <a href="https://www.guinness-storehouse.com/en/booking" target="_blank" rel="noopener">Book Tickets →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1577941202991-8e54f2a8b3e8?w=600&q=80" alt="Dublin">
+            <div class="info">
+              <h3>Free: Museums & Parks</h3>
+              <div class="price">Free</div>
+              <p>National Gallery, Chester Beatty Library, St Stephen's Green.</p>
+              <a href="https://www.visitdublin.com/things-to-do/free-to-visit" target="_blank" rel="noopener">See Free Attractions →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Day 3 -->
+    <article class="day-card">
+      <div class="day-header">
+        <h2>Day 3 — Dublin Day Trip</h2>
+        <span class="badge">Day trip</span>
+      </div>
+      <div class="day-content">
+        <div class="day-intro">Escape the city. Best 3 day-trip options (DART/bus accessible):</div>
+        <div class="section-label">Day Trips from Dublin</div>
+        <div class="options-grid">
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Howth">
+            <div class="info">
+              <h3>Howth (DART ~30 min)</h3>
+              <div class="price">~€5 train</div>
+              <p>Fishing village, cliff walks, seafood. Free to explore.</p>
+              <a href="https://www.visitdublin.com/see-do/details/howth" target="_blank" rel="noopener">Plan Visit →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80" alt="Malahide">
+            <div class="info">
+              <h3>Malahide Castle (DART ~30 min)</h3>
+              <div class="price">Castle ~€14</div>
+              <p>800-year-old castle, gardens. Train ~€5.</p>
+              <a href="https://www.malahidecastleandgardens.ie/" target="_blank" rel="noopener">Visit →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&q=80" alt="Glendalough">
+            <div class="info">
+              <h3>Glendalough (Bus tour ~€30)</h3>
+              <div class="price">~€30–40 tour</div>
+              <p>Ancient monastic site, Wicklow Mountains. Guided bus from Dublin.</p>
+              <a href="https://www.viator.com/Dublin-tours/Glendalough/d503-g3" target="_blank" rel="noopener">Find Tours →</a>
+            </div>
+          </div>
+        </div>
+        <div class="transport-note">DART day ticket ~€10. Bus tours to Glendalough/Newgrange ~€30–50.</div>
+      </div>
+    </article>
+
+    <!-- Day 4 -->
+    <article class="day-card">
+      <div class="day-header">
+        <h2>Day 4 — Travel to Galway</h2>
+        <span class="badge">2 nights</span>
+      </div>
+      <div class="day-content">
+        <div class="day-intro">Train or bus to Galway (2.5 hrs). Best 3 accommodation options:</div>
+        <div class="section-label">Accommodation (Galway)</div>
+        <div class="options-grid">
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80" alt="Galway hotel">
+            <div class="info">
+              <h3>The Abbeygate Townhouse</h3>
+              <div class="price">From ~€116/night</div>
+              <p>8.3 rating. Central, near Latin Quarter.</p>
+              <a href="https://www.booking.com/city/ie/galway.html" target="_blank" rel="noopener">Compare & Book →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80" alt="B&B">
+            <div class="info">
+              <h3>7 Cross Street Boutique Hotel</h3>
+              <div class="price">From ~€90/night</div>
+              <p>Top-rated. Heart of Latin Quarter. Walkable.</p>
+              <a href="https://www.booking.com/city/ie/galway.html" target="_blank" rel="noopener">Compare & Book →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&q=80" alt="Guesthouse">
+            <div class="info">
+              <h3>Aaron House B&B</h3>
+              <div class="price">From ~€85/night</div>
+              <p>College Road. Clean, affordable. Breakfast included.</p>
+              <a href="https://www.bedandbreakfasts.ie/counties.aspx" target="_blank" rel="noopener">Browse B&Bs →</a>
+            </div>
+          </div>
+        </div>
+        <div class="transport-note">Train Dublin–Galway €25–35. Bus €15–25. Book at irishrail.ie or buseireann.ie</div>
+      </div>
+    </article>
+
+    <!-- Day 5 -->
+    <article class="day-card">
+      <div class="day-header">
+        <h2>Day 5 — Galway & Connemara</h2>
+        <span class="badge">Galway</span>
+      </div>
+      <div class="day-content">
+        <div class="day-intro">Explore Galway city and nearby villages. Best options:</div>
+        <div class="section-label">Activities</div>
+        <div class="options-grid">
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80" alt="Kinvara">
+            <div class="info">
+              <h3>Kinvara Village</h3>
+              <div class="price">~€8 bus · Free to explore</div>
+              <p>Charming coastal village on Galway Bay. Dunguaire Castle, farmers market (Fri), pubs with trad music.</p>
+              <span class="transport-badge no-car">No car needed — Bus 350 from Galway</span>
+              <a href="https://www.galwaytourism.ie/towns/kinvara/" target="_blank" rel="noopener" style="margin-top: 0.5rem; display: inline-block;">Explore Kinvara →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=600&q=80" alt="Connemara">
+            <div class="info">
+              <h3>Connemara Day Tour</h3>
+              <div class="price">~€45–55</div>
+              <p>Kylemore Abbey, Killary Fjord. Bus tour from Galway.</p>
+              <span class="transport-badge no-car">No car needed — guided tour</span>
+              <a href="https://www.viator.com/Galway-tours/Connemara/d510-g3" target="_blank" rel="noopener" style="margin-top: 0.5rem; display: inline-block;">Find Tours →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80" alt="Cliffs of Moher">
+            <div class="info">
+              <h3>Cliffs of Moher Tour</h3>
+              <div class="price">~€45–55</div>
+              <p>Full-day from Galway. Cliffs, Burren, Doolin.</p>
+              <span class="transport-badge no-car">No car needed — guided tour</span>
+              <a href="https://www.viator.com/Galway-tours/Cliffs-of-Moher/d510-g5" target="_blank" rel="noopener" style="margin-top: 0.5rem; display: inline-block;">Find Tours →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=600&q=80" alt="Galway streets">
+            <div class="info">
+              <h3>Free: Galway City</h3>
+              <div class="price">Free</div>
+              <p>Latin Quarter, Spanish Arch, Eyre Square. Walk & explore.</p>
+              <span class="transport-badge no-car">No car needed</span>
+              <a href="https://www.galwaytourism.ie/" target="_blank" rel="noopener" style="margin-top: 0.5rem; display: inline-block;">Explore Galway →</a>
+            </div>
+          </div>
+        </div>
+        <div class="transport-note">Bus 350 (Galway–Kinvara–Doolin) runs ~8x daily. Kinvara ~35 min from Galway. <a href="https://www.buseireann.ie/" target="_blank" rel="noopener">buseireann.ie</a></div>
+      </div>
+    </article>
+
+    <!-- Day 6 -->
+    <article class="day-card">
+      <div class="day-header">
+        <h2>Day 6 — Travel to Killarney</h2>
+        <span class="badge">2 nights</span>
+      </div>
+      <div class="day-content">
+        <div class="day-intro">Bus to Killarney (4–5 hrs). Best 3 accommodation options:</div>
+        <div class="section-label">Accommodation (Killarney)</div>
+        <div class="options-grid">
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=600&q=80" alt="Killarney">
+            <div class="info">
+              <h3>Abbey Lodge Hotel</h3>
+              <div class="price">From ~€100/night</div>
+              <p>4-star. Near National Park. Free parking, Wi-Fi.</p>
+              <a href="https://www.booking.com/city/ie/killarney.html" target="_blank" rel="noopener">Compare & Book →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80" alt="B&B">
+            <div class="info">
+              <h3>Ivy Cottage B&B</h3>
+              <div class="price">From ~€160/night</div>
+              <p>Historic building. Near cathedral. Free Wi-Fi, tea.</p>
+              <a href="https://www.booking.com/city/ie/killarney.html" target="_blank" rel="noopener">Compare & Book →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80" alt="Guesthouse">
+            <div class="info">
+              <h3>Killarney B&Bs (various)</h3>
+              <div class="price">From ~€90/night</div>
+              <p>Many options near town. Breakfast included.</p>
+              <a href="https://www.bedandbreakfasts.ie/counties.aspx" target="_blank" rel="noopener">Browse B&Bs →</a>
+            </div>
+          </div>
+        </div>
+        <div class="transport-note">Bus Galway–Killarney ~€25–35. Train via Limerick possible.</div>
+      </div>
+    </article>
+
+    <!-- Day 7 -->
+    <article class="day-card">
+      <div class="day-header">
+        <h2>Day 7 — Ring of Kerry</h2>
+        <span class="badge">Full day</span>
+      </div>
+      <div class="day-content">
+        <div class="day-intro">Full-day Ring of Kerry tour. Best 3 options:</div>
+        <div class="section-label">Tours</div>
+        <div class="options-grid">
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Ring of Kerry">
+            <div class="info">
+              <h3>Deros Coach Tours</h3>
+              <div class="price">€47 adult</div>
+              <p>Full-day. Torc, Kenmare, Ladies View. Live guide.</p>
+              <a href="https://theringofkerry.com/" target="_blank" rel="noopener">Book Tour →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80" alt="Scenic drive">
+            <div class="info">
+              <h3>Viator Ring of Kerry</h3>
+              <div class="price">From ~€47</div>
+              <p>Multiple operators. Free cancellation 24h before.</p>
+              <a href="https://www.viator.com/en-IE/Ring-of-Kerry-tours/Bus-and-Minivan-Tours/d22378-g12-c98" target="_blank" rel="noopener">Compare Tours →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&q=80" alt="Killarney Park">
+            <div class="info">
+              <h3>Killarney National Park (Free)</h3>
+              <div class="price">Free</div>
+              <p>Muckross House, Torc Waterfall. Walk or bike.</p>
+              <a href="https://www.killarneynationalpark.ie/" target="_blank" rel="noopener">Visit Park →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Day 8 -->
+    <article class="day-card">
+      <div class="day-header">
+        <h2>Day 8 — Travel to Cork</h2>
+        <span class="badge">2 nights</span>
+      </div>
+      <div class="day-content">
+        <div class="day-intro">Bus/train to Cork (1.5–2 hrs). Best 3 accommodation options:</div>
+        <div class="section-label">Accommodation (Cork)</div>
+        <div class="options-grid">
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a94dc962804?w=600&q=80" alt="Cork hotel">
+            <div class="info">
+              <h3>Budget hotels on Booking.com</h3>
+              <div class="price">From ~€90/night</div>
+              <p>Filter by price. Many near city center.</p>
+              <a href="https://www.booking.com/city/ie/cork.html" target="_blank" rel="noopener">Compare & Book →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80" alt="B&B">
+            <div class="info">
+              <h3>Cork B&Bs</h3>
+              <div class="price">From ~€80/night</div>
+              <p>20–30% cheaper than hotels. Breakfast included.</p>
+              <a href="https://www.bedandbreakfasts.ie/counties.aspx" target="_blank" rel="noopener">Browse B&Bs →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&q=80" alt="Guesthouse">
+            <div class="info">
+              <h3>Guesthouses Cork</h3>
+              <div class="price">From ~€85/night</div>
+              <p>Quieter, often with parking. Good value.</p>
+              <a href="https://www.booking.com/city/ie/cork.html" target="_blank" rel="noopener">Compare & Book →</a>
+            </div>
+          </div>
+        </div>
+        <div class="transport-note">Bus Killarney–Cork ~€15–25. Train also available.</div>
+      </div>
+    </article>
+
+    <!-- Day 9 -->
+    <article class="day-card">
+      <div class="day-header">
+        <h2>Day 9 — Cork City</h2>
+        <span class="badge">Cork</span>
+      </div>
+      <div class="day-content">
+        <div class="day-intro">Explore Cork. Best 3 activity options:</div>
+        <div class="section-label">Activities</div>
+        <div class="options-grid">
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1577941202991-8e54f2a8b3e8?w=600&q=80" alt="Cork">
+            <div class="info">
+              <h3>English Market</h3>
+              <div class="price">Free to browse</div>
+              <p>Historic covered market. Food, crafts, atmosphere.</p>
+              <a href="https://www.corkcity.ie/en/english-market/" target="_blank" rel="noopener">Visit →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80" alt="Blarney">
+            <div class="info">
+              <h3>Blarney Castle Day Trip</h3>
+              <div class="price">~€20 entry + bus</div>
+              <p>Kiss the Stone. Gardens. Bus from Cork city.</p>
+              <a href="https://www.blarneycastle.ie/" target="_blank" rel="noopener">Visit Castle →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Cobh">
+            <div class="info">
+              <h3>Cobh (train ~25 min)</h3>
+              <div class="price">~€8 train</div>
+              <p>Titanic heritage. Colorful houses. Free to explore.</p>
+              <a href="https://www.cobhheritage.com/" target="_blank" rel="noopener">Cobh Heritage →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Day 10 -->
+    <article class="day-card">
+      <div class="day-header">
+        <h2>Day 10 — Return to Dublin</h2>
+        <span class="badge">Departure</span>
+      </div>
+      <div class="day-content">
+        <div class="day-intro">Train/bus Cork–Dublin (~2.5 hrs). Airport transfer. End of trip.</div>
+        <div class="section-label">Transport</div>
+        <div class="options-grid">
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80" alt="Train">
+            <div class="info">
+              <h3>Irish Rail (Cork–Dublin)</h3>
+              <div class="price">€25–35</div>
+              <p>Direct train. Book ahead for best fares.</p>
+              <a href="https://www.irishrail.ie/" target="_blank" rel="noopener">Book Train →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80" alt="Bus">
+            <div class="info">
+              <h3>Bus Éireann / GoBus</h3>
+              <div class="price">€15–25</div>
+              <p>Cheaper. Slightly longer. Dublin city or airport.</p>
+              <a href="https://www.buseireann.ie/" target="_blank" rel="noopener">Book Bus →</a>
+            </div>
+          </div>
+          <div class="option-card">
+            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=80" alt="Airport">
+            <div class="info">
+              <h3>Dublin Airport</h3>
+              <div class="price">Bus ~€8</div>
+              <p>747/Airlink from city. Allow 2+ hrs before flight.</p>
+              <a href="https://www.dublinairport.com/" target="_blank" rel="noopener">Airport Info →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <footer>
+      <p>Prices are approximate and vary by season. Book in advance for best rates. No hostels included.</p>
+    </footer>
+  </div>
+</body>
+</html>

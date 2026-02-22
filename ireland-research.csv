@@ -1,0 +1,66 @@
+Category,Day,Option Name,Type,Price Low (EUR),Price High (EUR),Notes,Booking Link,Source
+Accommodation,1-2,The Grafton Hotel,Dublin Hotel,115,150,#1 best value cheap hotel. Central, modern. Near Grafton Street,https://www.booking.com/city/ie/dublin.html,Tripadvisor/Booking.com
+Accommodation,1-2,Travelodge Plus Dublin City Centre,Dublin Hotel,140,170,Clean cozy rooms. Excellent staff. Prime city center,https://www.booking.com/city/ie/dublin.html,Tripadvisor
+Accommodation,1-2,Kilronan House B&B,Dublin B&B,120,150,#1 B&B in Ireland. Boutique. Breakfast included,https://www.bedandbreakfasts.ie/,Tripadvisor
+Accommodation,1-2,Abbey Lodge,Dublin Hotel,73,95,From 73/night. Budget option,https://www.booking.com/city/ie/dublin.html,Dublin Best Hotel
+Accommodation,1-2,Gardiner Lodge,Dublin Hotel,91,120,Budget-friendly,https://www.booking.com/city/ie/dublin.html,Dublin Best Hotel
+Accommodation,1-2,Wellington Temple Bar,Dublin Hotel,99,130,Temple Bar area,https://www.booking.com/city/ie/dublin.html,Dublin Best Hotel
+Accommodation,1-2,Academy Plaza Hotel,Dublin Hotel,115,140,Near O'Connell Street. 8.3 rating. Free WiFi,https://www.booking.com/city/ie/dublin.html,Booking.com
+Accommodation,1-2,Dublin One,Dublin Hotel,111,140,4-star city center. 8.3 rating,https://www.booking.com/city/ie/dublin.html,Booking.com
+Accommodation,1-2,The Hendrick Smithfield,Dublin Hotel,130,160,Small smart rooms. LUAS tram access. Street art decor,https://www.booking.com/city/ie/dublin.html,InDublin
+Accommodation,1-2,Stauntons on the Green,Dublin Hotel,120,150,Georgian townhouse. Near St Stephen's Green,https://www.booking.com/city/ie/dublin.html,InDublin
+Activity,2,Book of Kells Trinity College,Dublin Attraction,21.50,65,Self-guided 21.50. Guided 65. Bundle with Trinity Trails 33.50,https://visittrinity.ie/book-of-kells-experience,Trinity College Official
+Activity,2,Guinness Storehouse,Dublin Attraction,26,36,Dynamic pricing. Includes Gravity Bar pint. Book early,https://www.guinness-storehouse.com/en/booking,Guinness Storehouse
+Activity,2,National Gallery of Ireland,Dublin Free,0,0,15000+ works. Free entry,https://www.nationalgallery.ie/,National Geographic
+Activity,2,Chester Beatty Library,Dublin Free,0,0,Manuscripts rare books. Free,https://www.chesterbeatty.ie/,Irish Road Trip
+Activity,2,Natural History Museum,Dublin Free,0,0,Dead Zoo. Free,https://www.museum.ie/,Irish Road Trip
+Activity,2,St Stephen's Green,Dublin Free,0,0,Urban park. Free,https://www.visitdublin.com/,Lonely Planet
+Activity,2,Grafton Street,Dublin Free,0,0,Street performers. Free to walk,https://www.visitdublin.com/,National Geographic
+Activity,2,National Botanical Gardens,Dublin Free,0,2,Free Sun 12pm 2:30pm. Otherwise 2 euro tours,https://www.botanicgardens.ie/,National Geographic
+Day Trip,3,Howth,Dublin Day Trip,5,10,DART 30 min. Fishing village cliff walks seafood. Train ~5,https://www.visitdublin.com/see-do/details/howth,Visit Dublin
+Day Trip,3,Malahide Castle,Dublin Day Trip,14,20,DART 30 min. Castle 14. Gardens. Train ~5,https://www.malahidecastleandgardens.ie/,Ireland Explore
+Day Trip,3,Glendalough,Dublin Day Trip,30,50,Bus tour. Monastic site Wicklow Mountains,https://www.viator.com/Dublin-tours/Glendalough/d503-g3,Viator
+Day Trip,3,Boyne Valley Newgrange,Dublin Day Trip,30,50,UNESCO site. Prehistoric tomb. Bus tour 45 min,https://www.viator.com/Dublin-tours/Boyne-Valley/d503-g3,Viator
+Day Trip,3,Powerscourt Gardens,Dublin Day Trip,10,15,45 min from Dublin. Gardens waterfall,https://www.powerscourt.com/,Ireland Explore
+Transport,3,DART Day Ticket,Dublin Transport,10,12,Unlimited DART. Howth Malahide accessible,https://www.irishrail.ie/,Irish Rail
+Accommodation,4-5,The Abbeygate Townhouse,Galway Hotel,116,150,8.3 rating. Central. Latin Quarter,https://www.booking.com/city/ie/galway.html,Booking.com
+Accommodation,4-5,7 Cross Street Boutique Hotel,Galway Hotel,90,120,Top-rated. Heart of Latin Quarter. Walkable,https://www.booking.com/city/ie/galway.html,Tripadvisor
+Accommodation,4-5,Aaron House B&B,Galway B&B,85,110,College Road. Clean affordable. Breakfast included,https://www.bedandbreakfasts.ie/,Galway Tourism
+Accommodation,4-5,Adare Guesthouse,Galway Guesthouse,80,100,Fr Griffin Place. Walking distance city centre,https://www.booking.com/city/ie/galway.html,Galway Tourism
+Accommodation,4-5,Leonardo Hotel Galway,Galway Hotel,161,200,8.6 rating. 161/night,https://www.booking.com/city/ie/galway.html,Booking.com
+Accommodation,4-5,The Connacht Hotel,Galway Hotel,120,150,Dublin Road. 8.5 rating,https://www.booking.com/hotel/ie/the-connacht-hotel.html,Booking.com
+Accommodation,4-5,Clifden Bay Lodge,Galway B&B,90,120,Connemara area,https://www.bedandbreakfasts.ie/,Galway Tourism
+Accommodation,4-5,Mountain View Guesthouse,Galway Guesthouse,85,110,Oughterard. Connemara,https://www.bedandbreakfasts.ie/,Galway Tourism
+Transport,4,Train Dublin-Galway,Intercity,25,35,2.5 hours. Book ahead,https://www.irishrail.ie/,Irish Rail
+Transport,4,Bus Dublin-Galway,Intercity,15,25,GoBus Bus Eireann. Slightly longer,https://www.buseireann.ie/,Travel Hub
+Activity,5,Kinvara Village,Galway Day Trip,8,8,Bus 350 from Galway. NO CAR NEEDED. Dunguaire Castle farmers market Fri trad music pubs,https://www.galwaytourism.ie/towns/kinvara/,Galway Tourism
+Activity,5,Connemara Day Tour,Galway Tour,45,55,Kylemore Abbey Killary Fjord. Bus from Galway. NO CAR NEEDED,https://www.viator.com/Galway-tours/Connemara/d510-g3,Viator
+Activity,5,Cliffs of Moher Tour,Galway Tour,45,55,Full day. Cliffs Burren Doolin. NO CAR NEEDED,https://www.viator.com/Galway-tours/Cliffs-of-Moher/d510-g5,Viator
+Activity,5,Latin Quarter Galway,Galway Free,0,0,Walk explore. Free. NO CAR NEEDED,https://www.galwaytourism.ie/,Galway Tourism
+Transport,5,Bus 350 Galway-Kinvara,Galway Transport,8,10,Bus Eireann. Galway-Kinvara-Doolin-Ennis. ~35 min to Kinvara. ~8x daily,https://www.buseireann.ie/,Bustimes.org
+Activity,5,Spanish Arch,Galway Free,0,0,Historic landmark. Free,https://www.galwaytourism.ie/,Galway Tourism
+Accommodation,6-7,Abbey Lodge Hotel Killarney,Killarney Hotel,94,130,4-star. Muckross Road. Free parking WiFi. Near National Park,https://www.booking.com/city/ie/killarney.html,Killarney Hotels
+Accommodation,6-7,Ivy Cottage B&B,Killarney B&B,160,190,Port Road. Historic. Near cathedral. 20% early booking discount,https://www.booking.com/city/ie/killarney.html,Killarney Hotels
+Accommodation,6-7,Killarney B&Bs various,Killarney B&B,90,120,Many options. Breakfast included,https://www.bedandbreakfasts.ie/,Bed and Breakfasts IE
+Transport,6,Bus Galway-Killarney,Intercity,25,35,4-5 hours. Via Limerick possible,https://www.buseireann.ie/,Bus Eireann
+Activity,7,Deros Coach Ring of Kerry,Killarney Tour,47,47,Full day. Torc Kenmare Ladies View. Live guide,https://theringofkerry.com/,Ring of Kerry
+Activity,7,Viator Ring of Kerry,Killarney Tour,47,55,Multiple operators. Free cancel 24h,https://www.viator.com/en-IE/Ring-of-Kerry-tours/Bus-and-Minivan-Tours/d22378-g12-c98,Viator
+Activity,7,Killarney National Park,Killarney Free,0,0,Muckross House Torc Waterfall. Walk or bike,https://www.killarneynationalpark.ie/,Killarney NP
+Accommodation,8-9,Cork Budget Hotels,Cork Hotel,90,130,Filter Booking.com by price. City center,https://www.booking.com/city/ie/cork.html,Booking.com
+Accommodation,8-9,Cork B&Bs,Cork B&B,80,110,20-30% cheaper than hotels. Breakfast included,https://www.bedandbreakfasts.ie/,Galway Tourism data
+Accommodation,8-9,Cork Guesthouses,Cork Guesthouse,85,115,Quieter. Often parking. Good value,https://www.booking.com/city/ie/cork.html,Booking.com
+Transport,8,Bus Killarney-Cork,Intercity,15,25,1.5-2 hours,https://www.buseireann.ie/,Bus Eireann
+Activity,9,English Market Cork,Cork Free,0,0,Historic covered market. Free to browse,https://www.corkcity.ie/en/english-market/,Cork City
+Activity,9,Blarney Castle,Cork Day Trip,20,25,Entry + bus. Kiss the Stone. Gardens,https://www.blarneycastle.ie/,Blarney Castle
+Activity,9,Cobh,Cork Day Trip,8,12,Train 25 min. Titanic heritage. Colorful houses,https://www.cobhheritage.com/,Cobh Heritage
+Transport,10,Train Cork-Dublin,Intercity,25,35,2.5 hours. Direct. Book ahead,https://www.irishrail.ie/,Irish Rail
+Transport,10,Bus Cork-Dublin,Intercity,15,25,Cheaper. Slightly longer. Airport option,https://www.buseireann.ie/,Bus Eireann
+Transport,10,Dublin Airport Bus,Airport,8,10,747 Airlink from city. 2+ hrs before flight,https://www.dublinairport.com/,Dublin Airport
+General,All,Car Rental (alternative),Transport,300,700,10 days. 30-70/day. Fuel insurance parking extra. Needed for rural,https://www.irishcarrentals.com/,Irish Car Rentals
+General,All,Public Transport 10 days,Transport,200,250,Buses trains. Cheaper if city-focused,https://www.irishrail.ie/,Travel Hub
+General,All,Budget 10 days total,Estimate,1200,2000,Per person mid-range. Varies by season,https://www.theirishroadtrip.com/trip-to-ireland-cost/,Irish Road Trip
+General,All,Off-peak savings,Tip,N/A,N/A,May June Sept Oct cheaper than summer. Book early,https://indublin.ie/,InDublin
+General,All,Booking.com Dublin,Search,113,,862 hotels. Filter budget,https://www.booking.com/city/ie/dublin.html,Booking.com
+General,All,Booking.com Galway,Search,147,,Multiple options,https://www.booking.com/city/ie/galway.html,Booking.com
+General,All,Booking.com Cork,Search,90,,Filter by price,https://www.booking.com/city/ie/cork.html,Booking.com
+General,All,Bedandbreakfasts.ie,Search,N/A,N/A,Search by county. Dublin Galway Cork Killarney,https://www.bedandbreakfasts.ie/counties.aspx,Bed and Breakfasts IE
