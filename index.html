@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>10-Day Ireland Itinerary | Dublin Start</title>
+  <title>The Fitzsimons 2026 Ireland Itinerary</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -23,18 +23,45 @@
       line-height: 1.6;
     }
     .hero {
-      background: linear-gradient(135deg, var(--clover) 0%, #1a3d16 100%);
-      color: white;
-      padding: 4rem 2rem;
+      position: relative;
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(45, 90, 39, 0.85) 0%, rgba(26, 61, 22, 0.75) 50%, rgba(61, 44, 41, 0.7) 100%);
+      z-index: 1;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('48377171_10156731082993346_2801220628714094592_n.jpg') center top / cover no-repeat;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 2rem;
+      max-width: 800px;
     }
     .hero h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-size: clamp(1.75rem, 4.5vw, 3.25rem);
       font-weight: 600;
       margin-bottom: 0.5rem;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.3);
     }
-    .hero p { opacity: 0.9; font-size: 1.1rem; }
+    .hero p {
+      opacity: 0.95;
+      font-size: 1.05rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.25);
+    }
     .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
     .day-card {
       background: white;
@@ -182,8 +209,11 @@
 </head>
 <body>
   <header class="hero">
-    <h1>10-Day Ireland Itinerary</h1>
-    <p>Starting in Dublin · Budget-friendly · Hotels & B&Bs only</p>
+    <div class="hero-bg" role="presentation"></div>
+    <div class="hero-content">
+      <h1>The Fitzsimons 2026 Ireland Itinerary</h1>
+      <p>10 days · Dublin → Galway → Killarney → Kinsale · Budget-friendly · Hotels & B&Bs only</p>
+    </div>
   </header>
 
   <div class="container">
